@@ -8,12 +8,13 @@ import 'package:jaguar_throttle/jaguar_throttle.dart';
 
 @Api()
 class ExampleApi {
-  Throttle throttle(_) => new Throttle(50, new Duration(seconds: 10));
+  Throttler throttle(_) =>
+      new Throttler(new Rate(new Duration(seconds: 10), 50));
 
   @Get(path: '/hello')
   @WrapOne(#throttle)
   String sayHello(Context ctx) {
-    final ThrottleState throttleState = ctx.getInput<ThrottleState>(Throttle);
+    final ThrottleState throttleState = ctx.getInput<ThrottleState>(Throttler);
     print('Remaining: ${throttleState.remaining}');
     return 'hello';
   }

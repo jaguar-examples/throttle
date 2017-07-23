@@ -1,6 +1,6 @@
 name: throttle
 description: Example showing how to rate-limit jaguar routes using jaguar_throttle
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/jaguar-examples/throttle
 author: Ravi Teja Gudapati <tejainece@gmail.com>
 
@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   jaguar: ^0.6.10
-  jaguar_throttle: ^0.1.0
+  jaguar_throttle: ^0.2.1
   jaguar_hotreload: ^0.1.0
 
 dev_dependencies:
